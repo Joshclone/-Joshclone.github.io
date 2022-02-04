@@ -12,9 +12,6 @@ body {
   background-color: #cdd3db;
 }
 
-.body {
-}
-
 .slider {
   width: 800px;
   height: 500px;
@@ -133,4 +130,260 @@ div.slide-up p {
   padding: 4px;
   color: black;
   font-weight: bolder;
+}
+
+@media only screen and (min-width: 600px) {
+  body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .slider {
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .slides {
+    margin-top: 10px;
+    width: 100%;
+    height: 200%;
+    display: flex;
+  }
+
+  .slides input {
+    display: none;
+  }
+
+  .slide {
+    width: 20%;
+    transition: 2s;
+  }
+
+  .slide img {
+    width: 200px;
+    height: 80px;
+    border-radius: 10px 50px;
+  }
+
+  /*manual nav*/
+
+  .navigation-manual {
+    position: absolute;
+    width: 200px;
+    margin-top: -10px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .manual-btn {
+    border: 2px solid #40d3dc;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+  }
+
+  .manual-btn:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  .manual-btn:hover {
+    background: #40d3dc;
+  }
+
+  #radio1:checked ~ .first {
+    margin-left: 0;
+  }
+
+  #radio2:checked ~ .first {
+    margin-left: -9%;
+  }
+
+  #radio3:checked ~ .first {
+    margin-left: -15%;
+  }
+
+  div.slide-left {
+    width: 30%;
+    overflow: hidden;
+  }
+  div.slide-right p {
+    animation: 10s slide-right;
+  }
+
+  @keyframes slide-right {
+    from {
+      margin-left: -30%;
+      width: 40%;
+    }
+
+    to {
+      margin-left: 0%;
+      width: 40%;
+    }
+  }
+
+  div.slide-up {
+    height: 20px;
+    overflow: hidden;
+  }
+  div.slide-up p {
+    animation: 10s slide-up;
+    margin-top: 30%;
+  }
+
+  @keyframes slide-up {
+    from {
+      margin-top: 50%;
+      height: 30%;
+    }
+
+    to {
+      margin-top: 0%;
+      height: 30%;
+    }
+  }
+
+  #jo {
+    font-size: 10px;
+  }
+
+  .first-letter {
+    font-size: 35px;
+    line-height: 30px;
+    padding: 2px;
+    color: black;
+    font-weight: bolder;
+  }
+}
+
+@media only screen and (min-width: 350px) {
+  body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .slider {
+    width: 100px;
+    height: 70px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .slides {
+    margin-top: 10px;
+    width: 50%;
+    height: 70%;
+    display: flex;
+  }
+
+  .slides input {
+    display: none;
+  }
+
+  .slide {
+    width: 10%;
+    transition: 2s;
+  }
+
+  .slide img {
+    width: 80px;
+    height: 60px;
+    border-radius: 5px 30px;
+  }
+
+  /*manual nav*/
+
+  .navigation-manual {
+    position: absolute;
+    width: 10px;
+    margin-top: -8px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .manual-btn {
+    border: 2px solid #40d3dc;
+    padding: 3px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: 1s;
+  }
+
+  .manual-btn:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  .manual-btn:hover {
+    background: #40d3dc;
+  }
+
+  #radio1:checked ~ .first {
+    margin-left: 0;
+  }
+
+  #radio2:checked ~ .first {
+    margin-left: -5%;
+  }
+
+  #radio3:checked ~ .first {
+    margin-left: -9%;
+  }
+
+  div.slide-left {
+    width: 10%;
+    overflow: hidden;
+  }
+  div.slide-right p {
+    animation: 10s slide-right;
+  }
+
+  @keyframes slide-right {
+    from {
+      margin-left: -10%;
+      width: 20%;
+    }
+
+    to {
+      margin-left: 0%;
+      width: 10%;
+    }
+  }
+
+  div.slide-up {
+    height: 10px;
+    overflow: hidden;
+  }
+  div.slide-up p {
+    animation: 10s slide-up;
+    margin-top: 30%;
+  }
+
+  @keyframes slide-up {
+    from {
+      margin-top: 20%;
+      height: 10%;
+    }
+
+    to {
+      margin-top: 0%;
+      height: 10%;
+    }
+  }
+
+  #jo {
+    font-size: 9px;
+  }
+
+  .first-letter {
+    font-size: 35px;
+    line-height: 30px;
+    padding: 2px;
+    color: black;
+    font-weight: bolder;
+  }
 }
